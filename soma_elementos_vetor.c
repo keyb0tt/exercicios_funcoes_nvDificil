@@ -22,10 +22,6 @@ char visual(char visualNeed[]){
     return 0;
 }
 
-int fixArrayLenght(int arrayLenght){
-    return arrayLenght -= 1; 
-}
-
 int setArrayLenght(){
     int arrayLenght;
 
@@ -35,23 +31,29 @@ int setArrayLenght(){
     return arrayLenght;
 }
 
-int arraySum(int mainArray[], int arrayLenght){
-    arrayLenght = fixArrayLenght(arrayLenght);
-    int sum = 0;
 
-    for(int i = 0; i <= arrayLenght; i++){
+int arraySum(int mainArray[], int arrayLenght){
+    int sum = 0;
+    
+    for(int i = 0; i <= arrayLenght - 1; i++){
         sum += mainArray[i];
     }   
-
-    return 0;
-}
-int fillArray(int mainArray[], int arrayLenght){
-
-
-
-    return mainArray[arrayLenght];
+    
+    return sum;
 }
 
+int arrayResult(int arrayLenght){
+    int mainArray[arrayLenght], sum = 0;
+
+    for(int i = 0; i <= arrayLenght - 1; i++){
+        printf("\n%d: ", i + 1);
+        scanf("%d", &mainArray[i]);
+    }
+    
+    sum = arraySum(mainArray, arrayLenght);
+    
+    return sum;
+}
 
 int main(){
     visual("header");
@@ -59,6 +61,8 @@ int main(){
     int arrayLenght = setArrayLenght();
 
     visual("divider");
+
+    printf("\n%d", arrayResult(arrayLenght));
 
     return 0 ;
 
