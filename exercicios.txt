@@ -1,5 +1,3 @@
-# exercicios_funcoes_nvDificil
-
 🔴 25 Exercícios Difíceis de Funções em C
 
 🎯 Foco: modularização, passagem por referência, recursividade e funções compostas.
