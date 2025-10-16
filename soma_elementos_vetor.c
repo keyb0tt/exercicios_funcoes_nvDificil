@@ -1,21 +1,26 @@
 // Crie uma função que receba um vetor e retorne a soma de todos os elementos.
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void clear(){
-    system("clear");
+char visual(char visualNeed[]){
+    // Clear
+    if(strcmp(visualNeed, "clear") == 0){
+        system("clear");
+    }
+    // Header
+    if(strcmp(visualNeed, "header") == 0){
+        system("clear");
+        printf("\n          ~ Soma de elementos do vetor ~\n");
+        printf("\n--------------------------------------------------\n\n");
+    }
+    // Divider
+    if(strcmp(visualNeed, "divider") == 0){
+        printf("\n--------------------------------------------------\n\n");
+    }
+
+    return 0;
 }
-
-void header(){
-    clear();
-    printf("\n          ~ Soma de elementos do vetor ~\n");
-    printf("\n--------------------------------------------------\n\n");
-}
-
-void divider(){
-    printf("\n--------------------------------------------------\n\n");
-}
-
 
 int setArrayLenght(){
     int arrayLenght;
@@ -38,13 +43,18 @@ int arraySum(int mainArray[], int arrayLenght){
 int fillArray(int mainArray[], int arrayLenght){
 
 
-    
+
     return mainArray[arrayLenght];
 }
 
 
 int main(){
-    header();
+    visual("header");
+    
+    int arrayLenght = setArrayLenght();
+
+    visual("divider");
 
     return 0 ;
+
 }
