@@ -22,9 +22,13 @@ char visual(char visualNeed[]){
     return 0;
 }
 
+int fixArrayLenght(int arrayLenght){
+    return arrayLenght -= 1; 
+}
+
 int setArrayLenght(){
     int arrayLenght;
-    
+
     printf("Defina o tamanho da array: ");
     scanf("%d", &arrayLenght);
     
@@ -32,13 +36,14 @@ int setArrayLenght(){
 }
 
 int arraySum(int mainArray[], int arrayLenght){
+    arrayLenght = fixArrayLenght(arrayLenght);
+    int sum = 0;
+
     for(int i = 0; i <= arrayLenght; i++){
-
-    }
-
+        sum += mainArray[i];
+    }   
 
     return 0;
-
 }
 int fillArray(int mainArray[], int arrayLenght){
 
