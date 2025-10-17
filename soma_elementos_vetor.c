@@ -16,7 +16,7 @@ char visual(char visualNeed[]){
     }
     // Divider
     if(strcmp(visualNeed, "divider") == 0){
-        printf("\n--------------------------------------------------\n\n");
+        printf("\n--------------------------------------------------\n");
     }
 
     return 0;
@@ -49,6 +49,8 @@ int arrayResult(int arrayLenght){
         printf("\n%d: ", i + 1);
         scanf("%d", &mainArray[i]);
     }
+
+    visual("divider");
     
     sum = arraySum(mainArray, arrayLenght);
     
@@ -57,12 +59,11 @@ int arrayResult(int arrayLenght){
 
 int main(){
     visual("header");
-    
     int arrayLenght = setArrayLenght();
-
+    
     visual("divider");
-
-    printf("\n%d", arrayResult(arrayLenght));
+    printf("\nSoma dos elementos: %d\n", arrayResult(arrayLenght));
+    visual("divider");
 
     return 0 ;
 
